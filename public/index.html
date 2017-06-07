@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Timestamp Microservice</title>
+		<link rel="stylesheet" href="/public/css/style.css" type="text/css">
+	</head>
+	<body>
+		<h1>Timestamp Microservice</h1>
+		<div class="container">
+			<p>USAGE:
+				<ol>
+					<li>Pass a string as a parameter in the URL, the API will check whether the string contains either a unix timestamp or a natural language date.</li>
+					<li>If it does, it will return both the Unix timestamp and the natural language form of that date in a JSON object.</li>
+					<li>If it does not contain a date or Unix timestamp, it will return null for those properties in the JSON object.</li>
+				</ol>
+			</p>
+			<p>
+				EXAMPLES:
+				<ul>
+					<li>Passing /1496793600 or /Wed June 07, 2017 after the root URL will return {"unix":1496793600,"natural":"Wed Jun 07 2017"}.</li>
+					<li>Passing a non-Date string will return {"unix":null,"natural":null}.</li>
+				</ul>
+			</p>
+		</div>
+		<div class="container" id="credits">
+			<p id='credits-p'>
+				created by <a href="https://www.linkedin.com/in/fabrizio-vitelli-0539aba4/" target="_blank">Fabrizio Vitelli</a>
+			</p>
+		</div>
+	</body>
+</html>
